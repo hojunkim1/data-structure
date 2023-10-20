@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-typedef struct {
+typedef struct
+{
   unsigned int student_number;
   char *name;
   int grading[4];
@@ -9,10 +10,12 @@ typedef struct {
 void insert_student(result_type *arr[], int i);
 void print_students(result_type *arr[]);
 
-int main() {
+int main()
+{
   result_type *std_array[4];
 
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 4; i++)
+  {
     insert_student(std_array, i);
   }
 
@@ -28,8 +31,10 @@ result_type a[4] = {{1001, "name 1", 99, 88, 77, 66},
 
 void insert_student(result_type *arr[], int i) { arr[i] = &a[i]; }
 
-void print_students(result_type *arr[]) {
-  for (int i = 0; i < 4; i++) {
+void print_students(result_type *arr[])
+{
+  for (int i = 0; i < 4; i++)
+  {
     printf("Student Number: %u\n", arr[i]->student_number);
     printf("Name: %s\n", arr[i]->name);
     printf("Grades: %d %d %d %d\n", arr[i]->grading[0], arr[i]->grading[1],

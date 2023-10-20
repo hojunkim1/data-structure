@@ -5,7 +5,8 @@
 void problem_3_1();
 void problem_3_2();
 
-int main() {
+int main()
+{
   printf("Problem 1\n");
   problem_3_1();
 
@@ -15,15 +16,18 @@ int main() {
   return 0;
 }
 
-void problem_3_1() {
+void problem_3_1()
+{
   int N;
   char swings[50];
 
   scanf("%d %s", &N, swings);
 
   int x = 1, y = 1, i = 0;
-  while (swings[i] != '\0') {
-    switch (swings[i]) {
+  while (swings[i] != '\0')
+  {
+    switch (swings[i])
+    {
     case 'L':
       if (x > 1)
         x--;
@@ -50,7 +54,8 @@ void problem_3_1() {
   printf("(%d, %d)\n", y, x);
 }
 
-void problem_3_2() {
+void problem_3_2()
+{
   int N, M, i, j, v;
 
   // Get number of terms
@@ -65,7 +70,8 @@ void problem_3_2() {
   scanf("%d", &M);
 
   // Struct for tdm
-  typedef struct {
+  typedef struct
+  {
     char *row;
     int col;
     int value;
@@ -75,9 +81,11 @@ void problem_3_2() {
   term *min_tdm;
   int count = 0;
   for (i = 0; i < N; i++)
-    for (j = 0; j < M; j++) {
+    for (j = 0; j < M; j++)
+    {
       scanf("%d", &v);
-      if (v != 0) {
+      if (v != 0)
+      {
         min_tdm[count].row = terms[i];
         min_tdm[count].col = j + 1;
         min_tdm[count].value = v;
